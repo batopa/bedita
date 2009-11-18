@@ -720,7 +720,7 @@ msgstr ""
 msgid "Missing parent"
 msgstr ""
 
-msgid "Missing publishing"
+msgid "Missing publication"
 msgstr ""
 
 msgid "Missing recipient"
@@ -1044,7 +1044,7 @@ msgstr ""
 msgid "Publisher is required (at least %1 alphanumerical char)"
 msgstr ""
 
-msgid "Publishing tree"
+msgid "Publication tree"
 msgstr ""
 
 msgid "Question detail"
@@ -1947,7 +1947,7 @@ msgstr ""
 msgid "new psw"
 msgstr ""
 
-msgid "new publishing"
+msgid "new publication"
 msgstr ""
 
 msgid "new section"
@@ -2142,7 +2142,7 @@ msgstr ""
 msgid "publisher"
 msgstr ""
 
-msgid "publishing"
+msgid "publication"
 msgstr ""
 
 msgid "pulldown single choice"

@@ -722,7 +722,7 @@ msgstr "Opzioni mancanti"
 msgid "Missing parent"
 msgstr "Parent mancante"
 
-msgid "Missing publishing"
+msgid "Missing publication"
 msgstr "Pubblicazione mancante"
 
 msgid "Missing recipient"
@@ -1049,7 +1049,7 @@ msgstr "Pubblicato da"
 msgid "Publisher is required (at least %1 alphanumerical char)"
 msgstr "La pubblicazione è obbligatoria (almeno %1 carattere alfanumerico)"
 
-msgid "Publishing tree"
+msgid "Publication tree"
 msgstr "Albero delle pubblicazioni"
 
 msgid "Question detail"
@@ -1953,7 +1953,7 @@ msgstr "nuove note"
 msgid "new psw"
 msgstr "nuova psw"
 
-msgid "new publishing"
+msgid "new publication"
 msgstr "nuova pubblicazione"
 
 msgid "new section"
@@ -2148,7 +2148,7 @@ msgstr "url pubblico"
 msgid "publisher"
 msgstr "editore"
 
-msgid "publishing"
+msgid "publication"
 msgstr "pubblicazioni"
 
 msgid "pulldown single choice"
