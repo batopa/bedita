@@ -56,7 +56,7 @@ class TreeTestCase extends BeditaTestCase {
 		$conf  = Configure::getInstance() ;
 		$filter["object_type_id"] = array($conf->objectTypes['area']["id"], $conf->objectTypes['section']["id"]);
 		$tree = $this->Tree->getAll(null, null, null, $filter) ;
-		pr("<h4>Load only publishing and sections tree</h4>") ;
+		pr("<h4>Load only publication and sections tree</h4>") ;
 		echo $this->buildHtmlTree($tree);
 		
 		pr("<hr/>");
