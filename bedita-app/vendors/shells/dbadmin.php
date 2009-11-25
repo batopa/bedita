@@ -390,6 +390,10 @@ class DbadminShell extends Shell {
 		// read header
 		$keys = fgetcsv($handle, 1000, ",");
 		$numKeys = count($keys);
+		// trim key fields
+		foreach ($keys as &$k) {
+			$k = trim($k); 
+		}
 		$data = array();
 		while (($fields = fgetcsv($handle, 1000, ",")) !== FALSE) {
 	    	$row++;

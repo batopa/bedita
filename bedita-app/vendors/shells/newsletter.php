@@ -168,7 +168,7 @@ class NewsletterShell extends Shell {
 				$count++;
 			}
 		}
-		$this->out("Moved $count cards from mailgroup '$from'' to '$to'");
+		$this->out("Moved $count cards from mailgroup '$from' to '$to'");
 		$res = $this->in("Do you want to remove mailgroup '$from'? [y/n]");
 		if($res != "y") {
 			$this->out("Bye");
