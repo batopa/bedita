@@ -697,8 +697,7 @@ abstract class FrontendController extends AppController {
 	   
 	   $this->setSectionPath($s, $s["id"]);
 	   $channel = array( 'title' => $this->publication["public_name"] . " - " . $s['title'] , 
-        'link' => "/section/".$sectionName,
-//        'url' => Router::url("/section/".$sectionName),
+        'link' => $s['canonicalPath'],
         'description' => $s['description'],
         'language' => $s['lang'],
        );
@@ -712,7 +711,7 @@ abstract class FrontendController extends AppController {
 				$description .= (!empty($obj['abstract']) && !empty($description))? "<hr/>" .  $obj['abstract'] : $obj['abstract'];
 				$description .= (!empty($obj['body']) && !empty($description))? "<hr/>" .  $obj['body'] : $obj['body'];
 	            $rssItems[] = array( 'title' => $obj['title'], 'description' => $description,
-	                'pubDate' => $obj['created'], 'link' => $s['path']."/".$item['nickname']);
+	                'pubDate' => $obj['created'], 'link' => $s['canonicalPath']."/".$item['nickname']);
 			}
 		}
        $this->set('items', $rssItems);
