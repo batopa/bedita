@@ -15,7 +15,7 @@
 
 {assign_concat var="imageAltAttribute"	0="alt='"  1=$item.title 2="'"}
 
-{assign_associative var="params" width=$thumbWidth height=$thumbHeight longside=false mode="fill" modeparam="000000" type=null upscale=false}
+{assign_associative var="params" presentation="thumb" width=$thumbWidth height=$thumbHeight longside=false mode="fill" modeparam="000000" type=null upscale=false}
 {assign_associative var="htmlAttr" alt=$item.title title=$item.name}
 
 {literal}
