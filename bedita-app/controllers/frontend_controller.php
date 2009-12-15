@@ -360,7 +360,7 @@ abstract class FrontendController extends AppController {
 			throw new BeditaException("wrong lang selected: ".$lang);
 		}
 		$this->Session->write('Config.language', $lang);
-		$this->Cookie->write($conf->cookieName["langSelect"], $lang, null, '+350 day'); 
+		$this->Cookie->write($conf->cookieName["langSelect"], $lang, false, '+350 day'); 
 		$this->currLang = $lang;
 
 		if(!empty($forward)) {

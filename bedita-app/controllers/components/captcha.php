@@ -48,18 +48,26 @@ class CaptchaComponent extends Object {
 		if (!empty($options["color"]))
 			$this->fontColor = $options["color"];
 		 
-		// Create a random string, leaving out 'o' to avoid confusion with '0'
+		// Create a random string, leaving out 'o' to avoid confusion with '0' and i,l
 		$str = strtoupper(substr(str_shuffle('123456789abcdefghjkmnpqrstuvwxyz'), 0, $length));
 		
 		// put captcha id in session
 		$this->controller->Session->write("captcha_id", $str);
 		
-		// Set the content type
-		header('Cache-control: no-cache, no-store, max-age=0, must-revalidate');
+		// send several headers to make sure the image is not cached
+		// taken directly from the PHP Manual
+
+		// Expire in the past, always modified
 		header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
+		header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); 
+		// HTTP/1.1
+		header("Cache-Control: no-store, no-cache, must-revalidate");
+		header("Cache-Control: post-check=0, pre-check=0", false); 
+		// HTTP/1.0
 		header('Pragma: no-cache');
+		//content type
 		header('Content-type: image/png'); 
-					
+
 		// Create a background image
 		if (is_dir(APP . "webroot".DS."captcha".DS."img")) {
 			foreach (glob(APP . "webroot".DS."captcha".DS."img".DS."*.png") as $filename) {
