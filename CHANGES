@@ -1,3 +1,24 @@
+Version 3.0.1 - betula
+ User-visible changes:
+ 	* replace publishing with publication
+ 	* fixed wrong behavior on select country in addressbook (added jquery.selectboxes plugin)
+ 	* fix video thumbnails 
+ 	* fix <select> in newsletter subscription method (single opt-in, double opt-in)
+ 
+ Frontend changes:
+ 	* fix including nickname.tpl(.ctp) view if exists and use views/pages instead of views/sections directory
+ 	* fix rss urls/links
+ 	* captcha generation bug solved (waiting for CakePHP to solve the srand bug ticket #140)
+ 	* fix canonicalPath
+ 
+ Developer-visibile changes:
+ 	* replacing deprecated videoThumbHeight with media.video.thumbHeight
+ 	* small shell fixes
+ 	* multiple recipients for mailSupport ("to"=>'addr1@example.com, addr2@example.com')
+ 	* fix build filter error with keyword rel_object_id
+ 
+  
+
 Version 3.0 - betula
 
  User-visible changes:
