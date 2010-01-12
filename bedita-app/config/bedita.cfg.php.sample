@@ -32,7 +32,7 @@
  */
 
 // BEdita instance name 
-$config["projectName"] = "BEdita 3.0";
+$config["projectName"] = "BEdita 3.0.1";
 
 /**
  ** ******************************************
