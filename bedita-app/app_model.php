@@ -359,6 +359,9 @@ class _emptyAfterFindView {
 	function afterFind($result) { return $result ; }
 }
 
+/**
+ * Bedita Object model base class
+ */
 class BEAppObjectModel extends BEAppModel {
 	var $recursive 	= 2 ;
 	
@@ -647,7 +650,10 @@ class BeditaAnnotationModel extends BEAppObjectModel {
 }
 
 
-
+/**
+ * Bedita Simple Stream Object Type model base class. 
+ * Extends from media object models that use streams as table
+ */
 class BeditaSimpleStreamModel extends BEAppObjectModel {
 
 	public $searchFields = array("title" => 10 , "description" => 6, 
@@ -704,7 +710,10 @@ class BeditaSimpleStreamModel extends BEAppObjectModel {
 	}		
 }
 
-
+/**
+ * Bedita Stream Object Type model base class. 
+ * Extends from media object models that have their specific table
+ */
 class BeditaStreamModel extends BEAppObjectModel {
 
 	public $searchFields = array("title" => 10 , "description" => 6, 
@@ -824,6 +833,7 @@ class BeditaProductModel extends BEAppObjectModel {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 /**
+ * Bedita Collection Object Type model base class
  */
 class BeditaCollectionModel extends BEAppObjectModel {
 
