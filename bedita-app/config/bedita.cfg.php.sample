@@ -32,7 +32,7 @@
  */
 
 // BEdita instance name 
-// $config["projectName"] = "My Project Name";
+$config["projectName"] = "";
 
 /**
  ** ******************************************
