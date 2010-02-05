@@ -22,6 +22,8 @@
 	
 	{include file="../common_inc/form_geotag.tpl"}
 	
+	{include file="../common_inc/form_translations.tpl"}
+	
 	{include file="../common_inc/form_assoc_objects.tpl" object_type_id=$conf->objectTypes.card.id}
 	
 	{include file="./inc/form_advanced_properties.tpl" el=$object}
