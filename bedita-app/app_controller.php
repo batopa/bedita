@@ -308,6 +308,15 @@ class AppController extends Controller
 		
 		// verify basic access
 		if(isset($this->moduleName)) { 
+			$moduleStatus = ClassRegistry::init("Module")->field("status", array("name" => $this->moduleName));
+			if ($moduleStatus != "on") {
+				if ($this->RequestHandler->isAjax()) {
+					throw new BeditaAjaxException(__("Module not available", true));
+				}
+				$logMsg = "Module [". $this->moduleName.  "] status off";
+				$this->handleError($logMsg, __("Module not available",true), $logMsg);
+				$this->redirect($this->referer());
+			}
 			foreach ($moduleList as $mod) {
 			 	if($this->moduleName == $mod['name']) { 
 			 		$this->modulePerms = $mod['flag'];
