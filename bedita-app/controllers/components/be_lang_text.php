@@ -94,6 +94,7 @@ class BeLangTextComponent extends Object {
 	 */
 	function setObjectLang(&$object, $lang, $status=array('on')) {
 		$object["languages"] = array();
+		
 		if (!empty($object["LangText"]["status"])) {
 			
 			foreach ($object["LangText"]["status"] as $langAvailable => $statusLang) {
@@ -108,7 +109,7 @@ class BeLangTextComponent extends Object {
 									if($key == "title") {
 										$object["languages"][$object["lang"]][$key] = $object[$key];
 									}
-									if($key != "status") {
+									if($key != "status" && !empty($object["LangText"][$key][$lang])) {
 										$object[$key] = $object["LangText"][$key][$lang];
 									}
 								}
@@ -127,6 +128,7 @@ class BeLangTextComponent extends Object {
 				}
 			}
 		}
+		
 		unset($object["LangText"]);
 	}
 }
