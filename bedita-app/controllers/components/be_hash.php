@@ -138,7 +138,7 @@ class BeHashComponent extends Object {
 					$viewsMsg = $this->getNotifyText("newsletterConfirmSubscribe", "viewsMsg");
 				} else {
 					$joindata['status'] = 'confirmed';
-					$body = (!empty($mailGroup["MailGroup"]["confirmation_in_message"]))? $mailGroup["MailGroup"]["confirmation_in_message"] : $this->getNotifyText("newsletterSubscribed", "mail_body");
+					$body = (!empty($mailGroup["confirmation_in_message"]))? $mailGroup["confirmation_in_message"] : $this->getNotifyText("newsletterSubscribed", "mail_body");
 					$subject = $this->getNotifyText("newsletterSubscribed", "subject");
 					$viewsMsg = $this->getNotifyText("newsletterSubscribed", "viewsMsg");
 				}
