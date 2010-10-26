@@ -82,7 +82,7 @@ class BlipHelper extends AppHelper {
 		$this->initBlipComponent();
 		$info = $this->blipComponent->getInfoVideo($obj['uid']);
 	
-		if(preg_match("/^http:\/\/blip.tv\/file\/get\/.*\.flv/",$info["mediaUrl"],$matched)) {
+		if(preg_match("/^http:\/\/blip.tv\/file\/get\/.*\.m4v|^http:\/\/blip.tv\/file\/get\/.*\.flv/",$info["mediaUrl"],$matched)) {
 			return $matched[0] ;
 		}
 

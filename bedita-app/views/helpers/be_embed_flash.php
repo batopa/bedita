@@ -92,7 +92,7 @@ class BeEmbedFlashHelper extends AppHelper {
 			$extension = $this->getFileExtension($fileToPlay);
 			if ($extension == "mp3") {
 				$fileType = "audio";
-			} elseif ($extension == "flv") {
+			} elseif ($extension == "flv" || $extension == 'm4v') {
 				$fileType = "video";
 			} else {
 				return false;
@@ -134,7 +134,7 @@ class BeEmbedFlashHelper extends AppHelper {
 			
 		if ($obj["object_type_id"] == Configure::read("objectTypes.audio.id") && $extension == 'mp3') {
 			return $this->embedAudio($obj['path'], $htmlAttributes, $flashvars, $flashParams);	
-		} elseif ($extension == 'flv') {
+		} elseif ($extension == 'flv' || $extension == 'm4v') {
 			if (!empty($obj['thumbnail'])) {
 				$flashvars['thumbnail'] = $obj['thumbnail']; 
 			}			
