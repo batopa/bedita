@@ -55,9 +55,16 @@ class BeBlipComponent extends Object {
 		$conf = Configure::getInstance() ;
 		$this->info = null ;
 		
-		if(!isset($conf->media_providers["blip"]["params"])) return false ;
+		// if id is not numeric try to get info from uri
+		if (!is_numeric($id) && !empty($attributes["uri"])) {
+			$urlinfo = $attributes["uri"] . "?skin=json&no_wrap=1";
+		} else {
+			if(!isset($conf->media_providers["blip"]["params"])) {
+				return false;
+			}
+			$urlinfo = sprintf($conf->media_providers["blip"]["params"]['urlinfo'], $id);
+		}
 		
-		$urlinfo = $conf->media_providers["blip"]["params"]['urlinfo'];
 		if (!empty($attributes["width"]))
 			$urlinfo .= "&amp;width=" . $attributes["width"];
 		elseif (!empty($conf->media_providers["blip"]["params"]["width"]))
@@ -68,31 +75,21 @@ class BeBlipComponent extends Object {
 			$urlinfo .= "&amp;height=" . $conf->media_providers["blip"]["params"]["height"];  
 		
 		// Get info
-		$fp = fopen(sprintf($urlinfo, $id), "r") ;
-		$json = "" ;
-		while(!feof($fp)) {
-			$json .= fread($fp, 1024) ;
-		}	
-		@fclose($fp) ;
-		if(!$json) return false ;
-		
-		// format the string
-		// remove start and end, that are not part of the string
-		$json = preg_replace(array("/^\s*blip_ws_results\s*\(\s*\[\s*/m", "/\s*\]\s*\)\s*;\s*$/mi"), "", $json) ;
-	
-		// remove comments
-		$json = preg_replace('/(\/\*[\s\S]*?\*\/?[\r]?[\n]?[\r\n])/m', '', $json) ;
-		
-		// remove single quotes
-		$json = preg_replace("/\'/mi", "\"", $json) ;
+		$json = file_get_contents($urlinfo);
 
+		if(!$json) {
+			return false;
+		}	
+		
 		// get assoc array
 		$ret = json_decode($json, true) ;
-		if(!($ret = json_decode($json, true))) return false ;
+		if (empty($ret)) {
+			return false ;
+		}
 		
-		$this->info = $ret['Post'] ;
+		$this->info = (!empty($ret["Post"]))? $ret["Post"] : $ret;
 		
-		return $this->info  ;
+		return $this->info;
 	}
 	
 	/**
@@ -132,8 +129,12 @@ class BeBlipComponent extends Object {
 	 * @return boolean
 	 */
 	public function setInfoToSave(&$data) {
-		if(!$this->getInfoVideo($data["uid"])) {
+		if(!$this->getInfoVideo($data["uid"], array("uri" => $data["path"]))) {
 			return false;
+		}
+		
+		if (!empty($this->info["item_id"]) && $data["uid"] != $this->info["item_id"]) {
+			$data["uid"] = $this->info["item_id"];
 		}
 		
 		$data['title'] = (empty($data['title']))? $this->info['title'] : trim($data['title']);

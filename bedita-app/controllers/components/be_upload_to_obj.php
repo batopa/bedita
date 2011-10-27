@@ -99,6 +99,7 @@ class BeUploadToObjComponent extends Object {
 		if (!empty($provider)) {
 			$dataURL['provider']	= $provider ;
 			$dataURL['uid']  	 	= $uid ;
+			$dataURL['path'] = $url;
 		
 			$componentName = Inflector::camelize("be_" . $provider);
 			if (isset($this->{$componentName}) && method_exists($this->{$componentName}, "setInfoToSave")) {
@@ -193,6 +194,17 @@ class BeUploadToObjComponent extends Object {
 			}
 		}
 		$provider = "";
+		return false ;
+		
+		$conf = Configure::getInstance();
+		foreach($conf->media_providers as $provider => $expressions) {
+			foreach($expressions["regexp"] as $expression) {
+				if(preg_match($expression, $uri, $matched)) {
+					$mediaProvider = array("provider" => $provider, "uri" => $matched[0], "video_uid" => $matched[1]);
+					return $mediaProvider;
+				}	
+			}
+		}
 		return false ;
 	}
 	
