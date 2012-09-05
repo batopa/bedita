@@ -27,12 +27,8 @@
 /bedita-app/config/bedita.version.php
 /bedita-app/config/bedita.sys.php
 /bedita-app/config/bedita.sys
-/bedita-app/config/local
 /bedita-app/config/.directory
 /bedita-app/config/*.copy
-
-# /bedita-app/config/local/
-/bedita-app/config/local/*
 
 # /bedita-app/config/notify/
 /bedita-app/config/notify/local.msg.php
@@ -72,9 +68,6 @@
 /bedita-app/webroot/testmodale.html
 /bedita-app/webroot/xopus
 /bedita-app/webroot/.directory
-
-# /bedita-app/webroot/files/
-/bedita-app/webroot/files/*
 
 # /bedita-app/webroot/img/
 /bedita-app/webroot/img/.directory
@@ -141,30 +134,3 @@
 
 # /frontend/site.example.com/tmp/smarty/compile/
 /frontend/site.example.com/tmp/smarty/compile/*.php
-
-# /frontend/wp.example.com/config/
-/frontend/wp.example.com/config/core.php
-
-# /frontend/wp.example.com/tmp/cache/
-/frontend/wp.example.com/tmp/cache/cake_*
-
-# /frontend/wp.example.com/tmp/cache/models/
-/frontend/wp.example.com/tmp/cache/models/*
-
-# /frontend/wp.example.com/tmp/cache/persistent/
-/frontend/wp.example.com/tmp/cache/persistent/*
-
-# /frontend/wp.example.com/tmp/cache/views/
-/frontend/wp.example.com/tmp/cache/views/*
-
-# /frontend/wp.example.com/tmp/logs/
-/frontend/wp.example.com/tmp/logs/*
-
-# /frontend/wp.example.com/tmp/sessions/
-/frontend/wp.example.com/tmp/sessions/*
-
-# /frontend/wp.example.com/tmp/smarty/compile/
-/frontend/wp.example.com/tmp/smarty/compile/*
-
-# /frontend/wp.example.com/tmp/tests/
-/frontend/wp.example.com/tmp/tests/*
