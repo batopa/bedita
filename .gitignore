@@ -1,0 +1,170 @@
+
+# /
+/apache
+/media*
+/addons
+/.project
+/*.settings
+/themes
+/media.*
+/*.cache
+/.buildpath
+/doxygen_*
+/dir_conflicts.*
+/nbproject
+/modules
+/frontends
+
+# /bedita-app/
+/bedita-app/.cache
+/bedita-app/.settings
+/bedita-app/.project
+
+# /bedita-app/config/
+/bedita-app/config/database.php
+/bedita-app/config/core.php
+/bedita-app/config/bedita.cfg.php
+/bedita-app/config/bedita.version.php
+/bedita-app/config/bedita.sys.php
+/bedita-app/config/bedita.sys
+/bedita-app/config/local
+/bedita-app/config/.directory
+/bedita-app/config/*.copy
+
+# /bedita-app/config/local/
+/bedita-app/config/local/*
+
+# /bedita-app/config/notify/
+/bedita-app/config/notify/local.msg.php
+
+# /bedita-app/tests/cases/components/
+/bedita-app/tests/cases/components/*.localdata.php
+
+# /bedita-app/tmp/
+/bedita-app/tmp/*.php.backup
+/bedita-app/tmp/import
+
+# /bedita-app/tmp/cache/
+/bedita-app/tmp/cache/cake_*
+
+# /bedita-app/tmp/cache/models/
+/bedita-app/tmp/cache/models/*
+
+# /bedita-app/tmp/cache/persistent/
+/bedita-app/tmp/cache/persistent/*
+
+# /bedita-app/tmp/cache/views/
+/bedita-app/tmp/cache/views/*
+
+# /bedita-app/tmp/logs/
+/bedita-app/tmp/logs/*
+
+# /bedita-app/tmp/smarty/compile/
+/bedita-app/tmp/smarty/compile/*
+
+# /bedita-app/vendors/shells/
+/bedita-app/vendors/shells/be_test.php
+
+# /bedita-app/webroot/
+/bedita-app/webroot/index.php
+/bedita-app/webroot/test.php
+/bedita-app/webroot/beditamedia
+/bedita-app/webroot/testmodale.html
+/bedita-app/webroot/xopus
+/bedita-app/webroot/.directory
+
+# /bedita-app/webroot/files/
+/bedita-app/webroot/files/*
+
+# /bedita-app/webroot/img/
+/bedita-app/webroot/img/.directory
+
+# /bedita-doc/api/
+/bedita-doc/api/html
+
+# /frontend/debug.example.com/config/
+/frontend/debug.example.com/config/core.php
+
+# /frontend/debug.example.com/tmp/cache/
+/frontend/debug.example.com/tmp/cache/cake_*
+
+# /frontend/debug.example.com/tmp/cache/models/
+/frontend/debug.example.com/tmp/cache/models/*
+
+# /frontend/debug.example.com/tmp/cache/persistent/
+/frontend/debug.example.com/tmp/cache/persistent/*
+
+# /frontend/debug.example.com/tmp/cache/views/
+/frontend/debug.example.com/tmp/cache/views/*
+
+# /frontend/debug.example.com/tmp/logs/
+/frontend/debug.example.com/tmp/logs/*
+
+# /frontend/debug.example.com/tmp/sessions/
+/frontend/debug.example.com/tmp/sessions/*
+
+# /frontend/debug.example.com/tmp/smarty/compile/
+/frontend/debug.example.com/tmp/smarty/compile/*
+
+# /frontend/dummy.example.com/config/
+/frontend/dummy.example.com/config/core.php
+
+# /frontend/dummy.example.com/tmp/cache/
+/frontend/dummy.example.com/tmp/cache/cake_*
+
+# /frontend/dummy.example.com/tmp/cache/models/
+/frontend/dummy.example.com/tmp/cache/models/cake_*
+
+# /frontend/dummy.example.com/tmp/cache/persistent/
+/frontend/dummy.example.com/tmp/cache/persistent/cake_*
+
+# /frontend/dummy.example.com/tmp/logs/
+/frontend/dummy.example.com/tmp/logs/*
+
+# /frontend/dummy.example.com/tmp/smarty/compile/
+/frontend/dummy.example.com/tmp/smarty/compile/*
+
+# /frontend/site.example.com/config/
+/frontend/site.example.com/config/core.php
+
+# /frontend/site.example.com/tmp/cache/
+/frontend/site.example.com/tmp/cache/cake_*
+
+# /frontend/site.example.com/tmp/cache/models/
+/frontend/site.example.com/tmp/cache/models/cake_*
+
+# /frontend/site.example.com/tmp/cache/persistent/
+/frontend/site.example.com/tmp/cache/persistent/cake_*
+
+# /frontend/site.example.com/tmp/logs/
+/frontend/site.example.com/tmp/logs/*
+
+# /frontend/site.example.com/tmp/smarty/compile/
+/frontend/site.example.com/tmp/smarty/compile/*.php
+
+# /frontend/wp.example.com/config/
+/frontend/wp.example.com/config/core.php
+
+# /frontend/wp.example.com/tmp/cache/
+/frontend/wp.example.com/tmp/cache/cake_*
+
+# /frontend/wp.example.com/tmp/cache/models/
+/frontend/wp.example.com/tmp/cache/models/*
+
+# /frontend/wp.example.com/tmp/cache/persistent/
+/frontend/wp.example.com/tmp/cache/persistent/*
+
+# /frontend/wp.example.com/tmp/cache/views/
+/frontend/wp.example.com/tmp/cache/views/*
+
+# /frontend/wp.example.com/tmp/logs/
+/frontend/wp.example.com/tmp/logs/*
+
+# /frontend/wp.example.com/tmp/sessions/
+/frontend/wp.example.com/tmp/sessions/*
+
+# /frontend/wp.example.com/tmp/smarty/compile/
+/frontend/wp.example.com/tmp/smarty/compile/*
+
+# /frontend/wp.example.com/tmp/tests/
+/frontend/wp.example.com/tmp/tests/*
