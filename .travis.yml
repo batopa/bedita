@@ -44,3 +44,4 @@ before_script:
 
 script:
     - ./cake.sh testsuite app all
+    - ./cake.sh testsuite core case xml2
