@@ -42,7 +42,7 @@ class AreaTestCase extends BeditaTestCase {
 		
 		$this->requiredData(array("area"));
 		$result = $this->Area->save($this->data['area']) ;
-		$this->assertEqual($result,true);		
+		$this->assertEqual($result,false);		
 		if(!$result) {
 			debug($this->Area->validationErrors);
 			return ;
