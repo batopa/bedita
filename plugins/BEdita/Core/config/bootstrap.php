@@ -18,7 +18,7 @@ use Cake\I18n\I18n;
 use Cake\ORM\TableRegistry;
 
 /**
- * Plug table locator.
+ * Plug table locator yep.
  */
 TableRegistry::setTableLocator(new TableLocator());
 
