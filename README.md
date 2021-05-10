@@ -1,5 +1,6 @@
 # BEdita, a back-end API
 
+
 [![Build Status](https://github.com/bedita/bedita/workflows/Run%20tests/badge.svg)](https://github.com/bedita/bedita/actions?query=workflow%3A%22Run+tests%22)
 [![Publish plugins](https://github.com/bedita/bedita/workflows/Publish%20components/badge.svg)](https://github.com/bedita/bedita/actions?query=workflow%3A%22Publish+components%22)
 [![Code Coverage](https://codecov.io/gh/bedita/bedita/branch/4-cactus/graph/badge.svg)](https://codecov.io/gh/bedita/bedita/branch/4-cactus)
