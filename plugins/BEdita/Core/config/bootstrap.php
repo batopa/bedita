@@ -18,6 +18,10 @@ use Cake\I18n\FrozenDate;
 use Cake\I18n\I18n;
 use Cake\ORM\TableRegistry;
 
+if (!empty($bato)) {
+    echo 'bato is here!';
+}
+
 /**
  * Plug table locator.
  */
